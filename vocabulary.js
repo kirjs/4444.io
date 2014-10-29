@@ -1,4 +1,4 @@
-[
+var vocabulary = [
     {
         term: 'URL (Universal Resource Locator)',
         definition: 'Internet address of a file'
@@ -23,3 +23,5 @@
         definition: 'A program which takes HTML and displays a web page' 
     } 
 ]
+
+vocabularyCallback( vocabulary );
