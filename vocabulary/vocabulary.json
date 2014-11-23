@@ -26,6 +26,14 @@
     {
         "term": "Browser",
         "definition": "A program which takes HTML and displays a web page"
+    },
+    {
+        "term": "Pixel",
+        "definition": "Physical point on the screen"
+    },
+    {
+        "term": "CSS (Cascading Style Sheets)",
+        "definition": "A language that defines look and formatting for a web page"
     }
 ]
 
