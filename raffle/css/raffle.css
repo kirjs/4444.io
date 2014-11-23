@@ -1,0 +1,99 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: helvetica-neue, sans-serif;
+}
+
+#logo {
+    background: url( logo.png ) no-repeat;
+    height: 100px;
+    line-height: 150px;
+    text-indent: 300px;
+}
+
+
+#wrapper {
+    width: 932px;
+    position: relative;
+    margin: auto;
+
+}
+
+h1 {
+    line-height: 50px;
+}
+
+h1 img {
+    height: 50px;
+    float: left;
+    margin-right: 40px;
+}
+
+
+.start, .participants  {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #fff;
+    border: 2px solid;
+    width: 200px;
+    height: 50px;
+    color: #f0522a;
+    font-size: 200%
+}
+.participants {
+    right: 230px;
+    color: #444;
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    width: 280px;
+
+}
+
+.participants.active {
+    background-color: #f0522a;
+    color: #ffffff;
+}
+.start:hover {
+    background: #f0522a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.kid-0 {
+    background: #f0522a;
+    color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    padding: 2px;
+
+    width: 300px;
+    height: 30px;
+    float: left;
+    margin: 10px 2px;
+
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+
+}
+
+.edit-participants textarea {
+
+    height: 500px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 120px;
+    bottom: 0;
+
+}

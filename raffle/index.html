@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://fb.me/react-0.12.1.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+    <link rel="stylesheet" href="css/raffle.css"/>
+    <meta charset="utf-8">
+    <title>Scripted Raffle</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+    <h1 id="logo">
+        Raffle
+    </h1>
+
+    <div id="raffle"></div>
+    <script type="text/jsx">
+        /** @jsx React.DOM */
+        var participants = ['Steven Fisher',
+            'Frances Perez',
+            'Phillip Howard',
+            'Kathryn Cunningham'
+        ];
+
+        function removeEmptyValues(array) {
+            return array.filter(function (a) {
+                return a !== '' && a !== ' '
+            });
+        }
+
+
+
+        function easing(t) {
+            return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+        }
+
+
+
+        var Participants = React.createClass({
+            updateParticipants: function (event) {
+                this.props.participants.push('11');
+            },
+            getInitialState: function () {
+                return {editMode: false};
+            },
+            toggleEditMode: function () {
+                this.setState(
+                    {editMode: !this.state.editMode}
+                );
+            },
+            render: function () {
+
+                var textarea;
+                var editButtonClass = 'participants';
+                var participants = this.props.participants.join('\n');
+                var editButtonText = 'Edit participants';
+                if( this.state.editMode  ){
+                    textarea = <textarea value = {participants}  onChange={this.props.onUpdateParticipants}></textarea>;
+                    editButtonClass += " active";
+                    editButtonText = 'Done editing';
+                }
+
+
+
+                return (
+                    <div className = "edit-participants">
+                        <input className = {editButtonClass} type = "button" value = {editButtonText} onClick = {this.toggleEditMode}/>
+                    {textarea}
+                    </div>
+                );
+            }
+        });
+        var Raffle = React.createClass({
+            next: function (iterationsLeft, total) {
+                if (iterationsLeft > 0) {
+                    var interval = easing(1) * 30;
+                    window.setTimeout(this.next.bind(this, iterationsLeft - 1, total), interval + 1);
+                }
+                this.setState({
+                    active: (this.state.active + 1) % this.props.participants.length
+                });
+
+            },
+
+
+            start: function () {
+                var winner = Math.floor(Math.random() * this.props.participants.length);
+                var iterations = this.props.participants.length * this.props.iterations;
+                this.next(winner + iterations, winner + iterations);
+            },
+
+            getDefaultProps: function () {
+                return {
+                    iterations: 4
+                };
+            },
+
+            getInitialState: function () {
+                return {
+                    active: -1
+                }
+            },
+
+            generateKidElement: function (name, index) {
+                var rank = "kid-" + Math.abs(index - this.state.active);
+                return <li key = {index} className = {rank}>{name}</li>
+            },
+
+
+            render: function () {
+                var participants = removeEmptyValues(this.props.participants).map(this.generateKidElement);
+
+                return (
+                    <div>
+                        <input className = "start" type = "button" value = "start" onClick = {this.start}/>
+                        <ul>{participants}</ul>
+                    </div>
+                );
+            }
+        });
+
+
+        var App = React.createClass({
+            getInitialState: function () {
+                return {participants: this.props.participants};
+            },
+
+            updateParticipants: function (ev) {
+
+                this.setState({participants: ev.target.value.split('\n')})
+            },
+            render: function () {
+                var participants = this.props.participants;
+                return (
+                    <div>
+                        <Raffle participants = {this.state.participants} active = "0"></Raffle>
+                        <Participants participants = {this.state.participants} onUpdateParticipants = {this.updateParticipants}></Participants >
+                    </div>
+                );
+            }
+        });
+        React.render(
+            <App participants = {participants}></App>,
+            document.getElementById('raffle')
+        );
+    </script>
+</div>
+</body>
+</html>
