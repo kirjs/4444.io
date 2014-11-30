@@ -34,6 +34,10 @@
     {
         "term": "CSS (Cascading Style Sheets)",
         "definition": "A language that defines look and formatting for a web page"
+    },
+    {
+        "term": "DIV tag",
+        "definition": "HTML container, used for grouping things"
     }
 ]
 
