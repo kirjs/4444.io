@@ -1,0 +1,22 @@
+colorize(tag-name, color)
+  .section.{tag-name} {
+    outline 1px darken(color, 80%) solid;
+    .title {
+      background darken(color, 80%);
+      color: #fff;
+    }
+
+    .description:nth-child(2n+1) {
+      background-color: lighten(color, 10%);
+    }
+    .description:nth-child(2n) {
+      background-color: darken(color, 10%);
+    }
+  }
+
+colorize(tags, #ffd3b9)
+colorize(lists, #f9ffbf)
+colorize(characters, #d0ffc2)
+colorize(selectors, #beffe1)
+colorize(properties, #c6f7ff)
+

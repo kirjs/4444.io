@@ -1,0 +1,49 @@
+body, h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    width: 900px;
+}
+
+.header {
+    overflow: auto;
+}
+.header img {
+    float: left;
+}
+.header h1 {
+    float: right;
+    line-height: 100px;
+    margin-top: 25px;
+}
+
+.title {
+    font-size: 14px;
+}
+
+.section {
+    background: #ddd;
+    width: 290px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.section .title {
+    background: #444;
+    padding: 10px;
+    color: white;
+}
+
+.section .description {
+    padding: 10px;
+    overflow: auto;
+}
+
+.section .description .definition {
+    float: right;
+}
+

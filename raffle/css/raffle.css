@@ -6,7 +6,7 @@ body, html {
 }
 
 #logo {
-    background: url( logo.png ) no-repeat;
+    background: url(../../cheatsheet/css/logo.png) no-repeat;
     height: 100px;
     line-height: 150px;
     text-indent: 300px;

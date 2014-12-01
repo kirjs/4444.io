@@ -1,0 +1,65 @@
+.section.tags {
+  outline: 1px #582100 solid;
+}
+.section.tags .title {
+  background: #582100;
+  color: #fff;
+}
+.section.tags .description:nth-child(2n+1) {
+  background-color: #ffd7c0;
+}
+.section.tags .description:nth-child(2n) {
+  background-color: #ffb78d;
+}
+.section.lists {
+  outline: 1px #515900 solid;
+}
+.section.lists .title {
+  background: #515900;
+  color: #fff;
+}
+.section.lists .description:nth-child(2n+1) {
+  background-color: #faffc5;
+}
+.section.lists .description:nth-child(2n) {
+  background-color: #f5ff92;
+}
+.section.characters {
+  outline: 1px #155a00 solid;
+}
+.section.characters .title {
+  background: #155a00;
+  color: #fff;
+}
+.section.characters .description:nth-child(2n+1) {
+  background-color: #d5ffc8;
+}
+.section.characters .description:nth-child(2n) {
+  background-color: #adff95;
+}
+.section.selectors {
+  outline: 1px #005930 solid;
+}
+.section.selectors .title {
+  background: #005930;
+  color: #fff;
+}
+.section.selectors .description:nth-child(2n+1) {
+  background-color: #c4ffe4;
+}
+.section.selectors .description:nth-child(2n) {
+  background-color: #92ffcc;
+}
+.section.properties {
+  outline: 1px #004e5b solid;
+}
+.section.properties .title {
+  background: #004e5b;
+  color: #fff;
+}
+.section.properties .description:nth-child(2n+1) {
+  background-color: #ccf8ff;
+}
+.section.properties .description:nth-child(2n) {
+  background-color: #99f1ff;
+}
