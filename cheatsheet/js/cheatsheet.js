@@ -12,7 +12,8 @@ var data = [
             {term: 'b', definition: '<b>bold</b>'},
             {term: 'i', definition: '<i>italic</i>'},
             {term: 'u', definition: '<u>underline</u>'},
-            {term: 'p', definition: '<p>paragraph</p>'}
+            {term: 'p', definition: '<p>paragraph</p>'},
+            {term: 'div', definition: '<p>division</p>'},
         ]
     },
     {
@@ -58,7 +59,8 @@ var data = [
             {term: '{', definition: 'Left curly bracket'},
             {term: '{', definition: 'Right curly bracket'},
             {term: ':', definition: 'Colon'},
-            {term: ';', definition: 'Semicolon'}
+            {term: ';', definition: 'Semicolon'},
+            {term: '#', definition: 'Hashtag'},
 
         ]
     },
