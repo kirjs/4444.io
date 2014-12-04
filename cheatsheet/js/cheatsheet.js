@@ -33,7 +33,8 @@ var data = [
             {term: 'border: 1px red solid;' },
             {term: 'margin: 10px;'},
             {term: 'padding: 10px;'},
-            {term: 'bottom: 10px;'}
+            {term: 'bottom: 10px;'},
+            {term: 'border-radius: 5px;'}
 
         ]
     },
