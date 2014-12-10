@@ -30,7 +30,7 @@ var data = [
             {term: 'top: 10px'},
             {term: 'right: 10px'},
             {term: 'bottom: 10px'},
-            {term: 'border: 1px red solid;' },
+            {term: 'border: 1px red solid;'},
             {term: 'margin: 10px;'},
             {term: 'padding: 10px;'},
             {term: 'bottom: 10px;'},
@@ -72,6 +72,15 @@ var data = [
             {term: 'something', definition: 'TAG Selector'},
             {term: '#something', definition: 'ID Selector'},
             {term: '.something', definition: 'Class Selector'}
+        ]
+    },
+    {
+        title: 'Shortcuts',
+        className: 'shortcuts',
+        definitions: [
+            {term: '⌘ + C', definition: 'Copy'},
+            {term: '⌘ + V', definition: 'Paste'},
+            {term: '⌘ + R', definition: 'Refresh'}
         ]
     }
 
