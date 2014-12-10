@@ -63,16 +63,16 @@
 .section.properties .description:nth-child(2n) {
   background-color: #99f1ff;
 }
-.section.properties {
+.section.shortcuts {
   outline: 1px #00265c solid;
 }
-.section.properties .title {
+.section.shortcuts .title {
   background: #00265c;
   color: #fff;
 }
-.section.properties .description:nth-child(2n+1) {
+.section.shortcuts .description:nth-child(2n+1) {
   background-color: #d3e5ff;
 }
-.section.properties .description:nth-child(2n) {
+.section.shortcuts .description:nth-child(2n) {
   background-color: #a0c7ff;
 }
