@@ -1,8 +1,16 @@
-<h1>4444.io</h1>
-<script>
+<h1 >4444.io</h1 >
+<script >
 
 
     var redirects = [
+        {
+            match: '30',
+            redirect: 'http://jsbin.com/paqikukago/1/edit?js,output'
+        },
+        {
+            match: 'rpc',
+            redirect: 'http://jsbin.com/paqikukago/1/edit?js,output'
+        },
         {
             match: /^\d+$/,
             redirect: 'https://github.com/ScriptEdClaremontHS/lesson$0'
@@ -17,24 +25,24 @@
         }
     ];
     var hash = location.hash.substr(1);
-    if( hash ){
+    if (hash) {
 
 
-        var redirect = redirects.reduce(function( result, redirect ){
+        var redirect = redirects.reduce(function (result, redirect) {
 
             var match = hash.match(redirect.match);
-            if( match ){
-                result = redirect.redirect.replace(/\$(\d)/, function(a, b){
+            if (match) {
+                result = redirect.redirect.replace(/\$(\d)/, function (a, b) {
                     return match[b];
                 });
             }
-           return result;
+            return result;
 
         }, undefined);
 
-        if( redirect ){
-           window.location = redirect;
+        if (redirect) {
+            window.location = redirect;
         }
 
     }
-</script>
+</script >
