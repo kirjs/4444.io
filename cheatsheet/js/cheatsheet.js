@@ -61,7 +61,7 @@ var data = [
             {term: '{', definition: 'Right curly bracket'},
             {term: ':', definition: 'Colon'},
             {term: ';', definition: 'Semicolon'},
-            {term: '#', definition: 'Hashtag'},
+            {term: '#', definition: 'Hashtag'}
 
         ]
     },
@@ -80,7 +80,7 @@ var data = [
         definitions: [
             {term: '⌘ + C', definition: 'Copy'},
             {term: '⌘ + V', definition: 'Paste'},
-            {term: '⌘ + R', definition: 'Refresh'}
+            {term: '⌘ + R', definition: 'Refresh The Browser'}
         ]
     }
 
