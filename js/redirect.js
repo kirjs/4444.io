@@ -16,8 +16,7 @@ function redirect( hash, matches ){
         }, undefined);
 
         if (redirect) {
-            console.log(redirect);
-            //window.location = redirect;
+            window.location = redirect;
         }
 
     }
