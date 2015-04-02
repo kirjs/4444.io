@@ -1,5 +1,7 @@
 <h1 >4444.io</h1 >
-<script >
+<script src = "js/tabletop.js"></script>
+<script src = "js/redirect.js"></script>
+<script type = "old/stuff">
 
 
     var redirects = [
@@ -24,25 +26,5 @@
             redirect:  'https://scriptedclaremonths.github.io/resources'
         }
     ];
-    var hash = location.hash.substr(1);
-    if (hash) {
 
-
-        var redirect = redirects.reduce(function (result, redirect) {
-
-            var match = hash.match(redirect.match);
-            if (match) {
-                result = redirect.redirect.replace(/\$(\d)/, function (a, b) {
-                    return match[b];
-                });
-            }
-            return result;
-
-        }, undefined);
-
-        if (redirect) {
-            window.location = redirect;
-        }
-
-    }
 </script >
