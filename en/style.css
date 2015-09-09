@@ -1,0 +1,50 @@
+body {
+    background: url('Cityscape_768x1024.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 100px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#overlay {
+    background: #000000;
+    opacity: 0.6;
+}
+
+#message, #overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: #7cc142;
+    font-size: 8em;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+    color: #ddd;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+    color: #ddd;
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 6em;
+    color: #ff0;
+}
